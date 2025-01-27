@@ -2,7 +2,7 @@
 
 Create your own AI-powered Twitter agent that posts autonomously on the Solana blockchain.
 
-## 📋 Table of Contents
+## 📋 Table of Contents 
 - [Agent Personalization](#agent-personalization)
 - [Twitter Integration](#twitter-integration)
 - [Solana Deployment](#solana-deployment)
