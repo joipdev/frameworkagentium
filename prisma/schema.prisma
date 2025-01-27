@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Agent {
+  id String @id @unique
+
+  creatorWallet   String
+  contractAddress String?
+
+  name        String
+  description String
+
+  catchPhrases     String
+  personality      String
+  activities       String
+  basicDescription String
+  terms            Json
+
+  tweetFrequency Int
+  lastTweetTime  DateTime?
+
+  twitterAccessToken  String?
+  twitterAccessSecret String?
+
+  active Boolean @default(false)
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+model AgentTweet {
+  id String @id @unique
+
+  agentId String
+  tweetId String
+  text    String
+
+  createdAt DateTime @default(now())
+}
+
+model AgentImagePrompt {
+  id String @id @unique
+
+  agentId String
+  prompt  String
+
+  createdAt DateTime @default(now())
+}
