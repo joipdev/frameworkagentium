@@ -1,6 +1,6 @@
 # 🤖 Twitter Agent Creation Guide
 
-Create your own AI-powered Twitter agent that posts autonomously on the Solana blockchain.
+Create your own AI-powered Twitter agent that posts autonomously
 
 ## 📋 Table of Contents 
 - [Agent Personalization](#agent-personalization)
